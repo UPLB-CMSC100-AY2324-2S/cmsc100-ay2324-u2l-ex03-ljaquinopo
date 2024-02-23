@@ -70,5 +70,10 @@ function storePassword(name, password1, password2) {
     }
 }
 
+console.log(storePassword("John", "Pass1234", "Pass1234") ); // returns {name: "John", newpassword:"4321ssaP"}
+console.log(storePassword("John", "pass1234", "pass1234") ); // prompts “Invalid Password!”
+console.log(storePassword("John", "pass1234", "pass1234567")); //prompts “Wrong Password!”
+console.log(storePassword("John", "pass1", "pass1") ); //prompts “Insufficient Number of Strings!”
+
 
 
