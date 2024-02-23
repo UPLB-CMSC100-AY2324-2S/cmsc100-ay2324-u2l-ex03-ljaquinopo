@@ -39,4 +39,15 @@ function validatePassword(password1, password2) {
     }
 }
 
+function reversePassword(password) {
+    let reversedPassword = ""; // Initialize an empty string to store the reversed password
+    
+    // Iterate through each character of the password in reverse order
+    for (let i = password.length - 1; i >= 0; i--) {
+        reversedPassword += password[i]; // Concatenate each character to the reversed password string
+    }
+    
+    return reversedPassword; // Return the reversed password
+}
+
 
