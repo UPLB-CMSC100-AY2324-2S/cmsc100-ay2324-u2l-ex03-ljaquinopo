@@ -51,3 +51,24 @@ function reversePassword(password) {
 }
 
 
+function storePassword(name, password1, password2) {
+    // Check if both passwords are valid
+    if (validatePassword(password1, password2)) {
+        // If valid, return an object with the name and reversed password
+        return {
+            name: name,
+            newpassword: reversePassword(password1), // Using the reversePassword function
+        };
+    } else {
+        if(password1!=password2){
+            return "Wrong Password";
+        }else if(!checkPasswordLength(password1) && !checkPasswordLength(password2)){
+            return "Insufficient Number of Strings!";
+        }else if(!checkPasswordComplexity(password1) && !checkPasswordComplexity(password2)){
+            return "Invalid Password";
+        }
+    }
+}
+
+
+
